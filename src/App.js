@@ -18,7 +18,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const { confirmed, recovered, deaths, lastUpdate} = await covidApi.getCovid();
+      const { confirmed, recovered, deaths, lastUpdate} = await covidApi.getInformationCovid();
 
       //lấy ra những dữ liệu cần thiết
       const modifiedData = {
