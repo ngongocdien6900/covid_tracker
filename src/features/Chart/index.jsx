@@ -36,13 +36,13 @@ function Chart() {
           datasets: [
             {
               data: dailyData.map(({ confirmed }) => confirmed),
-              label: "Infected",
+              label: "Bị lây nhiễm",
               borderColor: "#3333ff",
               fill: true,
             },
             {
               data: dailyData.map(({ deaths }) => deaths),
-              label: "Deaths",
+              label: "Tử vong",
               borderColor: "red",
               backgroundColor: "rgba(255, 0, 0, .5)",
               fill: true,
