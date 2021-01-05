@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import covidApi from "../../api/covidApi";
 import "./style.scss";
-import { Line, Bar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 
 function Chart() {
   const [dailyData, setDailyData] = useState([]);
@@ -14,6 +14,7 @@ function Chart() {
     try {
       const response = await covidApi.getDailyData();
 
+      //get value total
       const modifiedData = response.map(data => ({
           confirmed: data.confirmed.total,
           deaths: data.deaths.total,
