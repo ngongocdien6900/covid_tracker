@@ -3,7 +3,7 @@ import queryString from 'query-string';
 
 const axiosClient = axios.create({
   //khi gọi api chỉ cần chỉ định ở sau thôi
-  baseURL: 'https://covid19.mathdro.id/',
+  baseURL: 'https://covid19.mathdro.id/api/',
   headers: {
     'Content-Type': 'application/json',
   },

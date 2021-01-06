@@ -2,13 +2,22 @@ import axiosClient from './axiosClient';
 
 const covidApi = {
 
-  getInformationCovid(data) {
-    const url = '/api';
-    return axiosClient.get(url, data);
+  getInformationCovid(country) {
+    const url = '/';
+    let changeableUrl = url;
+
+    if(country) changeableUrl = `/countries/${country}`;
+
+    return axiosClient.get(changeableUrl);
   },
 
   getDailyData(data) {
-    const url= '/api/daily';
+    const url= '/daily';
+    return axiosClient.get(url, data); 
+  },
+
+  getCountries(data) {
+    const url = '/countries';
     return axiosClient.get(url, data); 
   }
 
